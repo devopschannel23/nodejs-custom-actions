@@ -10,9 +10,12 @@ jobs:
       - name: Get code
         uses: actions/checkout@v6
       - name: using my custom action for install and cache deps
+        id: cache-deps
         uses: ./.github/actions/installing-caching-deps
         with:
           caching: 'false'
+      - name: Output Info
+        run: echo "Cache used? ${{ steps.cache-deps.outputs.used-cache }}"
       - name: Test code
         id: run-tests
         run: npm run test
