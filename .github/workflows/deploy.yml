@@ -56,7 +56,8 @@ jobs:
       - name: Output info from JS custom action
         uses: ./.github/actions/js-custom-action
       - name: Getting info from docker custom action
-        uses: ./.github/actions/docker-custom-action
+        uses: devopschannel23/docker-custom-action@v1
         with:
-          name: 'John'  
+          name: 'John'
+
         
