@@ -1,0 +1,5 @@
+name: js-custom-action
+description: a simple js custom action example
+runs:
+  using: 'node20'
+  main: main.js
